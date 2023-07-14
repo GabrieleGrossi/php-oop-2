@@ -21,6 +21,9 @@ include __DIR__.'/database.php';
 </head>
 <body>
     <main>
+        <h1>
+            E-Commerce for animals
+        </h1>
         <?php
             foreach ($dogProducts as $dogProduct) {
         ?>
@@ -31,32 +34,46 @@ include __DIR__.'/database.php';
                             echo $dogProduct->name;
                         ?>
                 </li>
+                <li>
+                    Price:
+                        <?php
+                            echo $dogProduct->price;
+                        ?>
+                </li>
+                <li>
+                    Image:
+                        <?php
+                            echo $dogProduct->image;
+                        ?>
+                </li>
             </ul>
         <?php
             }
         ?>    
     </main>
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">
-                Card title
-            </h5>
-            <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-            </p>
+    <!--
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">
+                    Card title
+                </h5>
+                <p class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    An item
+                </li>
+                <li class="list-group-item">
+                    A second item
+                </li>
+                <li class="list-group-item">
+                    A third item
+                </li>
+            </ul>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-                An item
-            </li>
-            <li class="list-group-item">
-                A second item
-            </li>
-            <li class="list-group-item">
-                A third item
-            </li>
-        </ul>
-    </div>
+    -->
 </body>
 </html>
