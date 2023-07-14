@@ -1,4 +1,7 @@
 <?php
+include_once __DIR__.'/Toys.php';
+include_once __DIR__.'/Kennel.php';
+include_once __DIR__.'/Food.php';
 class Products{
     public $name;
     public $price;
