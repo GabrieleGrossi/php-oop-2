@@ -5,29 +5,34 @@ include_once __DIR__ . '/Product/Toys.php';
 include_once __DIR__ . '/Product/Products.php';
 
 $dogProducts = [
-    $first = new Product(
+    $first = new Products(
         'Ciotola per cani', 
         '23,59',
-        'https://m.media-amazon.com/images/I/61nKznhtbvL._AC_UL320_.jpg'
-    )
+        'https://m.media-amazon.com/images/I/61nKznhtbvL._AC_UL320_.jpg',
+        'Prodotto',
+    ),
     $second = new Food (
-        'Proteico'
-        '14 kg'
+        'Proteico',
+        'Kg 14',
         'Croccantini',
         '54,90',
-        'https://m.media-amazon.com/images/I/81Rs5jh2x8L._AC_UL320_.jpg'
-    )
+        'https://m.media-amazon.com/images/I/81Rs5jh2x8L._AC_UL320_.jpg',
+        'Cibo',
+    ),
     $third = new Kennel(
-        'Piccola'
+        'Piccola',
         'Cuccia per cane',
         '24,43',
-        'https://m.media-amazon.com/images/I/61hBb9nFtxS._AC_UL320_.jpg'
-    )
+        'https://m.media-amazon.com/images/I/61hBb9nFtxS._AC_UL320_.jpg',
+        'Cuccia',
+    ),
     $fourth = new Toys(
-        'Rosso'
-        'Molto rumoroso'
+        'Rosso',
+        'Molto rumoroso',
         'Palla per cani',
         '12,69',
-        'https://m.media-amazon.com/images/I/61oaFtJA3GL._AC_UL320_.jpg'
+        'https://m.media-amazon.com/images/I/61oaFtJA3GL._AC_UL320_.jpg',
+        'Gioco',
     )
 ]
+?>

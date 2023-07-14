@@ -7,7 +7,7 @@ Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, 
 
 <?php
 include __DIR__.'/Product/Products.php';
-
+include __DIR__.'/database.php';
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +20,22 @@ include __DIR__.'/Product/Products.php';
     <title>PHP-OOP-2</title>
 </head>
 <body>
+    <main>
+        <?php
+            foreach ($dogProducts as $dogProduct) {
+        ?>
+            <ul>
+                <li>
+                    Name: 
+                        <?php 
+                            echo $dogProduct->name;
+                        ?>
+                </li>
+            </ul>
+        <?php
+            }
+        ?>    
+    </main>
     <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">

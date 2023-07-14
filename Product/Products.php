@@ -6,13 +6,12 @@ class Products{
     public $name;
     public $price;
     public $image;
-    public static $category = "Categoria"
+    public static $category = "Prodotto";
 
     function _construct($name, $price, $image, $category){
         $this->name=$name;
         $this->price=$price;
         $this->image=$image;
         $this->category=$category;
-
     }
 }
