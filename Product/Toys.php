@@ -4,8 +4,7 @@ class Toys extends Products{
     public $color;
     public $noisy;
 
-    function __constructed($color, $noisy, $name, $price, $image, $categories){
-        parent::__construct($name, $price, $image, $categories);
+    function __constructed($color, $noisy)
         $this->color = $color;
         $this->noisy = $noisy;
     }

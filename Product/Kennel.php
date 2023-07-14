@@ -4,9 +4,8 @@ class Kennel extends Products
 {
     public $size;
 
-    function __construct()
-    {
-        parent::__construct($size, $name, $price, $image, $categories);
+    function __construct($size){
+        parent::__construct($size);
         $this->size = $size;
     }
 }
