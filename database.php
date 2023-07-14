@@ -12,12 +12,12 @@ $dogProducts = [
         'Prodotto',
     ),
     $second = new Food (
-        'Proteico',
-        'Kg 14',
         'Croccantini',
         '54,90',
         'https://m.media-amazon.com/images/I/81Rs5jh2x8L._AC_UL320_.jpg',
         'Cibo',
+        'Proteico',
+        'Kg 14',
     ),
     $third = new Kennel(
         'Piccola',
@@ -27,12 +27,12 @@ $dogProducts = [
         'Cuccia',
     ),
     $fourth = new Toys(
-        'Rosso',
-        'Molto rumoroso',
         'Palla per cani',
         '12,69',
         'https://m.media-amazon.com/images/I/61oaFtJA3GL._AC_UL320_.jpg',
         'Gioco',
+        'Molto rumoroso',
+        'Rosso',
     )
 ]
 ?>

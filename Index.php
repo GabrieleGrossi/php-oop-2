@@ -24,56 +24,61 @@ include __DIR__.'/database.php';
         <h1>
             E-Commerce for animals
         </h1>
-        <?php
+        <?php            
             foreach ($dogProducts as $dogProduct) {
         ?>
-            <ul>
-                <li>
-                    Name: 
-                        <?php 
-                            echo $dogProduct->name;
-                        ?>
-                </li>
-                <li>
-                    Price:
+            
+            <div class="card" style="width: 18rem;">
+                <img src="
+                            <?php
+                                echo $dogProduct->image;
+                            ?>" alt="Img product" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Name: 
+                            <?php 
+                                echo $dogProduct->name;
+                            ?>
+                    </h5>
+                </div>
+                <span class="card-text">
+                    Price : 
                         <?php
                             echo $dogProduct->price;
                         ?>
-                </li>
-                <li>
-                    Image:
+                </span>
+                <span class="card-text">
+                    Category : 
                         <?php
-                            echo $dogProduct->image;
+                            echo $dogProduct->category;
                         ?>
-                </li>
-            </ul>
+                </span>
+                <?php 
+                        if ($dogProduct->category == 'Cibo') {
+                            ?>
+                                <span>Proteico: <?php echo $dogProduct->protein ?></span>
+                                <span>Peso: <?php echo $dogProduct->weight ?></span>
+                            <?php
+                        } elseif ($dogProduct->category == 'Gioco') {
+                            ?>
+                                <span>Rumoroso: <?php echo $dogProduct->noisy ?></span>
+                                <span>Colore: <?php echo $dogProduct->color ?></span>
+                            <?php
+                        } elseif ($dogProduct->category == 'Cuccia') {
+                            ?>
+                                <span>Size: <?php echo $dogProduct->size ?></span>
+                            <?php
+                        } else {
+                            ?>
+                            <?php
+                        }
+                            ?>
+            </div>
         <?php
             }
         ?>    
     </main>
     <!--
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">
-                    Card title
-                </h5>
-                <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                </p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                    An item
-                </li>
-                <li class="list-group-item">
-                    A second item
-                </li>
-                <li class="list-group-item">
-                    A third item
-                </li>
-            </ul>
-        </div>
     -->
 </body>
 </html>
