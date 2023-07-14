@@ -76,7 +76,62 @@ include __DIR__.'/database.php';
             </div>
         <?php
             }
-        ?>    
+        ?>
+        
+        
+        <?php            
+            foreach ($catProducts as $catProduct) {
+        ?>
+            
+            <div class="card" style="width: 18rem;">
+                <img src="
+                            <?php
+                                echo $catProduct->image;
+                            ?>" alt="Img product" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Name: 
+                            <?php 
+                                echo $catProduct->name;
+                            ?>
+                    </h5>
+                </div>
+                <span class="card-text">
+                    Price : 
+                        <?php
+                            echo $catProduct->price;
+                        ?>
+                </span>
+                <span class="card-text">
+                    Category : 
+                        <?php
+                            echo $catProduct->category;
+                        ?>
+                </span>
+                <?php 
+                        if ($catProduct->category == 'Cibo') {
+                            ?>
+                                <span>Proteico: <?php echo $catProduct->protein ?></span>
+                                <span>Peso: <?php echo $catProduct->weight ?></span>
+                            <?php
+                        } elseif ($dogProduct->category == 'Gioco') {
+                            ?>
+                                <span>Rumoroso: <?php echo $catProduct->noisy ?></span>
+                                <span>Colore: <?php echo $catProduct->color ?></span>
+                            <?php
+                        } elseif ($dogProduct->category == 'Cuccia') {
+                            ?>
+                                <span>Size: <?php echo $catProduct->size ?></span>
+                            <?php
+                        } else {
+                            ?>
+                            <?php
+                        }
+                            ?>
+            </div>
+        <?php
+            }
+        ?>
     </main>
     <!--
     -->

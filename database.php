@@ -34,5 +34,37 @@ $dogProducts = [
         'Molto rumoroso',
         'Rosso',
     )
+    ];
+
+$catProducts = [
+    $first = new Products(
+        'Antiparassiti per gatti',
+        '20,59',
+        'https://m.media-amazon.com/images/I/81TT1ubwdjL._AC_UL320_.jpg',
+        'Prodotto',
+    ),
+    $second = new Food (
+        'Cibo per gatti',
+        '14,29',
+        'https://m.media-amazon.com/images/I/71CyV+7jdqL._AC_UL320_.jpg',
+        'Cibo',
+        'Proteico',
+        '84gr per lattina'
+    ),
+    $third = new Kennel (
+        'Small',
+        'Cucccia per gatti',
+        'Prez19,99zo',
+        'https://m.media-amazon.com/images/I/81dIZOQXLqL._AC_UL320_.jpg',
+        'Cuccia'
+    ),
+    $fourth = new Toys(
+        'Gioco per gatti',
+        '22,99',
+        'https://m.media-amazon.com/images/I/61Wso2mpiiL._AC_UL320_.jpg',
+        'Gioco',
+        'Molto rumoroso',
+        'Variabile',
+    ),
 ]
 ?>
