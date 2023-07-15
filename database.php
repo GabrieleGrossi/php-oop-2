@@ -20,20 +20,20 @@ $dogProducts = [
         'Kg 14',
     ),
     $third = new Kennel(
-        'Piccola',
         'Cuccia per cane',
         '24,43',
         'https://m.media-amazon.com/images/I/61hBb9nFtxS._AC_UL320_.jpg',
         'Cuccia',
+        'Piccola',
     ),
     $fourth = new Toys(
         'Palla per cani',
         '12,69',
         'https://m.media-amazon.com/images/I/61oaFtJA3GL._AC_UL320_.jpg',
         'Gioco',
-        'Molto rumoroso',
         'Rosso',
-    )
+        'Molto rumoroso',
+    ),
     ];
 
 $catProducts = [
@@ -52,19 +52,19 @@ $catProducts = [
         '84gr per lattina'
     ),
     $third = new Kennel (
-        'Small',
-        'Cucccia per gatti',
-        'Prez19,99zo',
+        'Cuccia per gatti',
+        '19,99',
         'https://m.media-amazon.com/images/I/81dIZOQXLqL._AC_UL320_.jpg',
-        'Cuccia'
+        'Cuccia',
+        'Piccola',
     ),
     $fourth = new Toys(
         'Gioco per gatti',
         '22,99',
         'https://m.media-amazon.com/images/I/61Wso2mpiiL._AC_UL320_.jpg',
-        'Gioco',
-        'Molto rumoroso',
+        'Gioco,',
         'Variabile',
-    ),
+        'Molto rumoroso',
+        )
 ]
 ?>

@@ -24,114 +24,136 @@ include __DIR__.'/database.php';
         <h1>
             E-Commerce for animals
         </h1>
-        <?php            
-            foreach ($dogProducts as $dogProduct) {
-        ?>
-            
-            <div class="card" style="width: 18rem;">
-                <img src="
-                            <?php
-                                echo $dogProduct->image;
-                            ?>" alt="Img product" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Name: 
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex">
+                    <?php            
+                        foreach ($dogProducts as $dogProduct) {
+                    ?>
+                        
+                        <div class="card" style="width: 18rem;">
+                            <img src="
+                                        <?php
+                                            echo $dogProduct->image;
+                                        ?>" alt="Img product" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Name: 
+                                        <?php 
+                                            echo $dogProduct->name;
+                                        ?>
+                                </h5>
+                            </div>
+                            <span class="card-text">
+                                Price : 
+                                    <?php
+                                        echo $dogProduct->price;
+                                    ?>
+                            </span>
+                            <span class="card-text">
+                                Category : 
+                                    <?php
+                                        echo $dogProduct->category;
+                                    ?>
+                            </span>
                             <?php 
-                                echo $dogProduct->name;
-                            ?>
-                    </h5>
-                </div>
-                <span class="card-text">
-                    Price : 
-                        <?php
-                            echo $dogProduct->price;
-                        ?>
-                </span>
-                <span class="card-text">
-                    Category : 
-                        <?php
-                            echo $dogProduct->category;
-                        ?>
-                </span>
-                <?php 
-                        if ($dogProduct->category == 'Cibo') {
-                            ?>
-                                <span>Proteico: <?php echo $dogProduct->protein ?></span>
-                                <span>Peso: <?php echo $dogProduct->weight ?></span>
-                            <?php
-                        } elseif ($dogProduct->category == 'Gioco') {
-                            ?>
-                                <span>Rumoroso: <?php echo $dogProduct->noisy ?></span>
-                                <span>Colore: <?php echo $dogProduct->color ?></span>
-                            <?php
-                        } elseif ($dogProduct->category == 'Cuccia') {
-                            ?>
-                                <span>Size: <?php echo $dogProduct->size ?></span>
-                            <?php
-                        } else {
-                            ?>
-                            <?php
+                                    if ($dogProduct->category == 'Cibo') {
+                                        ?>
+                                            <span>Proteico: <?php echo $dogProduct->protein ?></span>
+                                            <span>Peso: <?php echo $dogProduct->weight ?></span>
+                                        <?php
+                                    } elseif ($dogProduct->category == 'Gioco') {
+                                        ?>
+                                            <span>Rumoroso: <?php echo $dogProduct->noisy ?></span>
+                                            
+                                            <span>Colore: <?php echo $dogProduct->color ?></span>
+                                        <?php
+                                    } elseif ($dogProduct->category == 'Cuccia') {
+                                        ?>
+                                            <span>Size: <?php echo $dogProduct->size ?></span>
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <?php
+                                    }
+                                        ?>
+                        </div>
+                    <?php
                         }
-                            ?>
-            </div>
-        <?php
-            }
-        ?>
-        
-        
-        <?php            
-            foreach ($catProducts as $catProduct) {
-        ?>
-            
-            <div class="card" style="width: 18rem;">
-                <img src="
-                            <?php
-                                echo $catProduct->image;
-                            ?>" alt="Img product" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Name: 
+                    ?>
+
+                </div>
+            </div>        
+            <div class="row">
+                <div class="col-12 d-flex">
+                    <?php            
+                        foreach ($catProducts as $catProduct) {
+                    ?>
+                        
+                        <div class="card" style="width: 18rem;">
+                            <img src="
+                                        <?php
+                                            echo $catProduct->image;
+                                        ?>" alt="Img product" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Name: 
+                                        <?php 
+                                            echo $catProduct->name;
+                                        ?>
+                                </h5>
+                            </div>
+                            <span class="card-text">
+                                Price : 
+                                    <?php
+                                        echo $catProduct->price;
+                                    ?>
+                            </span>
+                            <span class="card-text">
+                                Category : 
+                                    <?php
+                                        echo $catProduct->category;
+                                    ?>
+                            </span>
                             <?php 
-                                echo $catProduct->name;
-                            ?>
-                    </h5>
-                </div>
-                <span class="card-text">
-                    Price : 
-                        <?php
-                            echo $catProduct->price;
-                        ?>
-                </span>
-                <span class="card-text">
-                    Category : 
-                        <?php
-                            echo $catProduct->category;
-                        ?>
-                </span>
-                <?php 
-                        if ($catProduct->category == 'Cibo') {
-                            ?>
-                                <span>Proteico: <?php echo $catProduct->protein ?></span>
-                                <span>Peso: <?php echo $catProduct->weight ?></span>
-                            <?php
-                        } elseif ($dogProduct->category == 'Gioco') {
-                            ?>
-                                <span>Rumoroso: <?php echo $catProduct->noisy ?></span>
-                                <span>Colore: <?php echo $catProduct->color ?></span>
-                            <?php
-                        } elseif ($dogProduct->category == 'Cuccia') {
-                            ?>
-                                <span>Size: <?php echo $catProduct->size ?></span>
-                            <?php
-                        } else {
-                            ?>
-                            <?php
+                                    if ($catProduct->category == 'Cibo') {
+                                        ?>
+                                            <span>Proteico: <?php echo $catProduct->protein ?></span>
+                                            <span>Peso: <?php echo $catProduct->weight ?></span>
+                                        <?php
+                                    } elseif ($catProduct->category == 'Gioco') {
+                                        ?>
+                                            <span>
+                                                Rumoroso: <?php 
+                                                                echo $catProduct->noisy 
+                                                            ?>
+                                            </span>
+                                            <span>
+                                                Colore: <?php 
+                                                            echo $catProduct->color 
+                                                        ?>
+                                            </span>
+                                        <?php
+                                    } elseif ($catProduct->category == 'Cuccia') {
+                                        ?>
+                                            <span>
+                                                Size: <?php 
+                                                            echo $catProduct->size;
+                                                        ?>
+                                            </span>
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <?php
+                                    }
+                                        ?>
+                        </div>
+                    <?php
                         }
-                            ?>
+                    ?>
+                </div>
             </div>
-        <?php
-            }
-        ?>
+        </div>
     </main>
     <!--
     -->
