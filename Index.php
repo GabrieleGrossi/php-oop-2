@@ -33,7 +33,7 @@ include __DIR__.'/database.php';
                         foreach ($Products as $Product) {
                     ?>
                         
-                        <div class="card mx-5 mt-5" style="width: 18rem;">
+                        <div class="card mx-3 my-5" style="width: 18rem;">
                             <img src="
                                         <?php
                                             echo $Product->image;
