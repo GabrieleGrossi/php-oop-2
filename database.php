@@ -1,11 +1,11 @@
 <?php
-include_once __DIR__ . '/Product/Food.php';
-include_once __DIR__ . '/Product/Kennel.php';
-include_once __DIR__ . '/Product/Toys.php';
-include_once __DIR__ . '/Product/Products.php';
+include_once __DIR__ . '/Products/Food.php';
+include_once __DIR__ . '/Products/Kennel.php';
+include_once __DIR__ . '/Products/Toy.php';
+include_once __DIR__ . '/Products/Product.php';
 
 $dogProducts = [
-    $first = new Products(
+    $first = new Product(
         'Ciotola per cani', 
         '23,59',
         'https://m.media-amazon.com/images/I/61nKznhtbvL._AC_UL320_.jpg',
@@ -26,7 +26,7 @@ $dogProducts = [
         'Cuccia',
         'Piccola',
     ),
-    $fourth = new Toys(
+    $fourth = new Toy(
         'Palla per cani',
         '12,69',
         'https://m.media-amazon.com/images/I/61oaFtJA3GL._AC_UL320_.jpg',
@@ -37,7 +37,7 @@ $dogProducts = [
     ];
 
 $catProducts = [
-    $first = new Products(
+    $first = new Product(
         'Antiparassiti per gatti',
         '20,59',
         'https://m.media-amazon.com/images/I/81TT1ubwdjL._AC_UL320_.jpg',
@@ -58,7 +58,7 @@ $catProducts = [
         'Cuccia',
         'Piccola',
     ),
-    $fourth = new Toys(
+    $fourth = new Toy(
         'Gioco per gatti',
         '22,99',
         'https://m.media-amazon.com/images/I/61Wso2mpiiL._AC_UL320_.jpg',
@@ -66,5 +66,5 @@ $catProducts = [
         'Variabile',
         'Molto rumoroso',
         )
-]
+    ];
 ?>

@@ -1,6 +1,6 @@
 <?php
-include_once __DIR__ . '/Products.php';
-class Food extends Products
+include_once __DIR__ . '/Product.php';
+class Food extends Product
 {
     public $protein;
     public $weight;

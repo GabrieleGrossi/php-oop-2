@@ -6,7 +6,7 @@ I prodotti saranno oltre al cibo, anche giochi, cucce, etc.
 Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, prezzo, icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia).--> 
 
 <?php
-include __DIR__.'/Product/Products.php';
+include __DIR__.'/Products/Product.php';
 include __DIR__.'/database.php';
 ?>
 
@@ -111,7 +111,7 @@ include __DIR__.'/database.php';
             </div>        
             <div class="row">
                 <div class="col-12 d-flex">
-                    <?php            
+                    <?php       
                         foreach ($catProducts as $catProduct) {
                     ?>
                         
