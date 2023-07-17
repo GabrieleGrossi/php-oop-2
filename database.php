@@ -62,7 +62,7 @@ $catProducts = [
         'Gioco per gatti',
         '22,99',
         'https://m.media-amazon.com/images/I/61Wso2mpiiL._AC_UL320_.jpg',
-        'Gioco,',
+        'Gioco',
         'Variabile',
         'Molto rumoroso',
         )

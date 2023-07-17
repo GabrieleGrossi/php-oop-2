@@ -22,7 +22,7 @@ include __DIR__.'/database.php';
 <body>
     <main>
         <h1>
-            E-Commerce for animals
+            E-Commerce per animali
         </h1>
         <div class="container">
             <div class="row">
@@ -31,27 +31,28 @@ include __DIR__.'/database.php';
                         foreach ($dogProducts as $dogProduct) {
                     ?>
                         
-                        <div class="card" style="width: 18rem;">
+                        <div class="card mx-5 mt-5" style="width: 18rem;">
                             <img src="
                                         <?php
                                             echo $dogProduct->image;
-                                        ?>" alt="Img product" class="card-img-top">
+                                        ?>" alt="Img product" class="card-img-top" style="width: auto; height: 200px; object-fit:contain;">
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    Name: 
+                                    Nome: 
                                         <?php 
                                             echo $dogProduct->name;
                                         ?>
                                 </h5>
                             </div>
                             <span class="card-text">
-                                Price : 
+                                Prezzo : 
                                     <?php
                                         echo $dogProduct->price;
                                     ?>
+                                $
                             </span>
                             <span class="card-text">
-                                Category : 
+                                Categoria : 
                                     <?php
                                         echo $dogProduct->category;
                                     ?>
@@ -59,18 +60,42 @@ include __DIR__.'/database.php';
                             <?php 
                                     if ($dogProduct->category == 'Cibo') {
                                         ?>
-                                            <span>Proteico: <?php echo $dogProduct->protein ?></span>
-                                            <span>Peso: <?php echo $dogProduct->weight ?></span>
+                                            <span>
+                                                Proteico: 
+                                                <?php 
+                                                    echo $dogProduct->protein 
+                                                ?>
+                                            </span>
+                                            <span>
+                                                Peso: 
+                                                <?php 
+                                                    echo $dogProduct->weight 
+                                                ?>
+                                            </span>
                                         <?php
                                     } elseif ($dogProduct->category == 'Gioco') {
                                         ?>
-                                            <span>Rumoroso: <?php echo $dogProduct->noisy ?></span>
-                                            
-                                            <span>Colore: <?php echo $dogProduct->color ?></span>
+                                            <span>
+                                                Colore: 
+                                                <?php 
+                                                    echo $dogProduct->color 
+                                                ?>
+                                            </span>
+                                            <span>
+                                                Rumoroso:
+                                                <?php 
+                                                    echo $dogProduct->noisy 
+                                                ?>
+                                            </span>
                                         <?php
                                     } elseif ($dogProduct->category == 'Cuccia') {
                                         ?>
-                                            <span>Size: <?php echo $dogProduct->size ?></span>
+                                            <span>
+                                                Taglia:
+                                                <?php 
+                                                    echo $dogProduct->size 
+                                                ?>
+                                            </span>
                                         <?php
                                     } else {
                                         ?>
@@ -90,27 +115,28 @@ include __DIR__.'/database.php';
                         foreach ($catProducts as $catProduct) {
                     ?>
                         
-                        <div class="card" style="width: 18rem;">
+                        <div class="card mx-5 mt-5" style="width: 18rem;">
                             <img src="
                                         <?php
                                             echo $catProduct->image;
-                                        ?>" alt="Img product" class="card-img-top">
+                                        ?>" alt="Img product" class="card-img-top" style="width: auto; height: 200px; object-fit:contain;">
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    Name: 
+                                    Nome: 
                                         <?php 
                                             echo $catProduct->name;
                                         ?>
                                 </h5>
                             </div>
                             <span class="card-text">
-                                Price : 
+                                Prezzo : 
                                     <?php
                                         echo $catProduct->price;
                                     ?>
+                                    $
                             </span>
                             <span class="card-text">
-                                Category : 
+                                Categoria : 
                                     <?php
                                         echo $catProduct->category;
                                     ?>
@@ -118,28 +144,41 @@ include __DIR__.'/database.php';
                             <?php 
                                     if ($catProduct->category == 'Cibo') {
                                         ?>
-                                            <span>Proteico: <?php echo $catProduct->protein ?></span>
-                                            <span>Peso: <?php echo $catProduct->weight ?></span>
+                                            <span>
+                                                Proteico: 
+                                                <?php 
+                                                    echo $catProduct->protein 
+                                                ?>
+                                            </span>
+                                            <span>
+                                                Peso: 
+                                                <?php 
+                                                    echo $catProduct->weight 
+                                                ?>
+                                            </span>
                                         <?php
                                     } elseif ($catProduct->category == 'Gioco') {
                                         ?>
                                             <span>
-                                                Rumoroso: <?php 
-                                                                echo $catProduct->noisy 
-                                                            ?>
+                                                Colore: 
+                                                <?php 
+                                                    echo $catProduct->color
+                                                ?>
                                             </span>
                                             <span>
-                                                Colore: <?php 
-                                                            echo $catProduct->color 
-                                                        ?>
+                                                Rumoroso: 
+                                                <?php 
+                                                    echo $catProduct->noisy 
+                                                ?>
                                             </span>
                                         <?php
                                     } elseif ($catProduct->category == 'Cuccia') {
                                         ?>
                                             <span>
-                                                Size: <?php 
-                                                            echo $catProduct->size;
-                                                        ?>
+                                                Taglia:
+                                                <?php 
+                                                    echo $catProduct->size;
+                                                ?>
                                             </span>
                                         <?php
                                     } else {
@@ -155,7 +194,5 @@ include __DIR__.'/database.php';
             </div>
         </div>
     </main>
-    <!--
-    -->
 </body>
 </html>
