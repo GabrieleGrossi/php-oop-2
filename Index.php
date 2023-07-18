@@ -15,6 +15,8 @@ include __DIR__.'/database.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- MyStyle -->
@@ -63,9 +65,9 @@ include __DIR__.'/database.php';
                                 Animale:
                                     <?php
                                     if ($Product->animal == 'Cane') {
-                                        ?><span> Cane</span><?php
+                                        ?><span> Cane <i class="fa-solid fa-dog"> </i></span><?php
                                     } elseif ($Product->animal == 'Gatto') {
-                                        ?><span></i> Gatto</span><?php
+                                        ?><span></i> Gatto <i class="fa-solid fa-cat"> </i> </span><?php
                                     }
                                     ?>
                             </span>
