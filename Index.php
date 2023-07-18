@@ -39,80 +39,80 @@ include __DIR__.'/database.php';
                                         <?php
                                             echo $Product->image;
                                         ?>" alt="Img product" class="card-img-top" style="width: auto; height: 200px; object-fit:contain;">
-                            <div class="card-body">
+                            <div class="card-body d-flex flex-column m-0 p-0">
                                 <h5 class="card-title">
                                     Nome: 
                                         <?php 
                                             echo $Product->name;
                                         ?>
                                 </h5>
-                            </div>
-                            <span class="card-text">
-                                Prezzo : 
-                                    <?php
-                                        echo $Product->price;
-                                    ?>
-                                $
-                            </span>
-                            <span class="card-text">
-                                Categoria : 
-                                    <?php
-                                        echo $Product->category;
-                                    ?>
-                            </span>
-                            <span class="card-text">
-                                Animale:
-                                    <?php
-                                    if ($Product->animal == 'Cane') {
-                                        ?><span> Cane <i class="fa-solid fa-dog"> </i></span><?php
-                                    } elseif ($Product->animal == 'Gatto') {
-                                        ?><span></i> Gatto <i class="fa-solid fa-cat"> </i> </span><?php
-                                    }
-                                    ?>
-                            </span>
-                            <?php 
+                                <button type="button" class="btn btn-warning my-3">
+                                    Prezzo : 
+                                        <?php
+                                            echo $Product->price;
+                                        ?>
+                                    $
+                                </button>
+                                <span class="card-text">
+                                    Categoria : 
+                                        <?php
+                                            echo $Product->category;
+                                        ?>
+                                </span>
+                                <span class="card-text">
+                                    Animale:
+                                        <?php
+                                        if ($Product->animal == 'Cane') {
+                                            ?><span> Cane <i class="fa-solid fa-dog"> </i></span><?php
+                                        } elseif ($Product->animal == 'Gatto') {
+                                            ?><span></i> Gatto <i class="fa-solid fa-cat"> </i> </span><?php
+                                        }
+                                        ?>
+                                </span>
+                                <?php 
                                     if ($Product->category == 'Cibo') {
-                                        ?>
-                                            <span>
-                                                Proteico: 
-                                                <?php 
-                                                    echo $Product->protein 
-                                                ?>
-                                            </span>
-                                            <span>
-                                                Peso: 
-                                                <?php 
-                                                    echo $Product->weight 
-                                                ?>
-                                            </span>
-                                        <?php
+                                ?>
+                                        <span>
+                                            Proteico: 
+                                            <?php 
+                                                echo $Product->protein 
+                                            ?>
+                                        </span>
+                                        <span>
+                                            Peso: 
+                                            <?php 
+                                                echo $Product->weight 
+                                            ?>
+                                        </span>
+                                <?php
                                     } elseif ($Product->category == 'Gioco') {
-                                        ?>
-                                            <span>
-                                                Colore: 
-                                                <?php 
-                                                    echo $Product->color 
-                                                ?>
-                                            </span>
-                                            <span>
-                                                Rumoroso:
-                                                <?php 
-                                                    echo $Product->noisy 
-                                                ?>
-                                            </span>
-                                        <?php
+                                ?>
+                                        <span>
+                                            Colore: 
+                                            <?php 
+                                                echo $Product->color 
+                                            ?>
+                                        </span>
+                                        <span>
+                                            Rumoroso:
+                                            <?php 
+                                                echo $Product->noisy 
+                                            ?>
+                                        </span>
+                                <?php
                                     } elseif ($Product->category == 'Cuccia') {
+                                ?>
+                                    <span>
+                                        Taglia:
+                                        <?php 
+                                            echo $Product->size 
                                         ?>
-                                            <span>
-                                                Taglia:
-                                                <?php 
-                                                    echo $Product->size 
-                                                ?>
-                                            </span>
-                                        <?php
+                                    </span>
+                                <?php
                                     } else {                                        
                                     }
-                                        ?>
+                                ?>
+                            </div>
                         </div>
                     <?php
                         }
